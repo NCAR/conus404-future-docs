@@ -1,6 +1,6 @@
 Project Title: Future Climate Simulation Technical Support and Scientific Collaboration
 
-NOAA has a requirement to modernize extreme precipitation guidance for the nation’s critical infrastructure according to the recommendations set forth by a recent National Academies of Science, Engineering, and Medicine report, “Modernizing ProbableMaximum Precipitation (PMP) Estimation” (June 2024).
+NOAA has a requirement to modernize extreme precipitation guidance for the nation’s critical infrastructure according to the recommendations set forth by a recent National Academies of Science, Engineering, and Medicine report, “Modernizing Probable Maximum Precipitation (PMP) Estimation” (June 2024).
 
 The National Academies study recommends that NOAA should adopt a model-based approach to PMP estimation that aligns with the revised PMP definition, consisting of multi-model large ensemble kilometer-scale or finer-resolution modeling to construct the probability distribution of precipitation for PMP estimation.
 
