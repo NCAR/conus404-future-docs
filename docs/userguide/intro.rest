@@ -1,2 +1,1 @@
-This site aims to host the CONUS404 Future project related documentation and User's Guide
-This site is still under construction and more will be added later.
+This site hosts the CONUS404 Future project related namelist files, run scripts, and post-processing scripts.
