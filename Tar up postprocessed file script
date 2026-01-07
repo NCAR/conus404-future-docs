@@ -1,0 +1,28 @@
+This is the script for tar'ing up the postprocessed files (using October-November-December 2022 as an example):
+
+#!/bin/tcsh
+#
+#  Project : USGS CONUS404
+#  Kyoko ikeda 23 March 2023
+#
+#if ( ${season} == 1 ) set MMs = ( 1 2 3 )
+#if ( ${season} == 2 ) set MMs = ( 4 5 6 )
+#if ( ${season} == 3 ) set MMs = ( 7 8 9 )
+#if ( ${season} == 4 ) set MMs = ( 10 11 12 )
+#
+#------------------------------------------------------------------------------------------
+# USER INPUTS
+#------------------------------------------------------------------------------------------
+  set calyear = 2022
+  set season = 4
+  set run  = "pgw"
+
+#------------------------------------------------------------------------------------------
+# MAIN
+#------------------------------------------------------------------------------------------
+
+  ./run_tar_processed_aux.csh ${run} ${calyear} ${season} >&! ./job_logs/tar_aux_calyr${calyear}_season${season}_${run}.out &
+  ./run_tar_processed_xtrm.csh ${run} ${calyear} ${season} >&! ./job_logs/tar_xtrm_calyr${calyear}_season${season}_${run}.out  &
+
+  ./run_tar_processed_wrf2d.csh ${run} ${calyear} ${season} >&! ./job_logs/tar_wrf2d_calyr${calyear}_season${season}_${run}.out &
+  ./run_tar_processed_wrf3d.csh ${run} ${calyear} ${season} >&! ./job_logs/tar_wrf3d_calyr${calyear}_season${season}_${run}.out &
