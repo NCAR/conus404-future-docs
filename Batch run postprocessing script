@@ -1,0 +1,94 @@
+This is the batch run postprocessing script (using October-November-December 2022 as an example):
+
+#!/bin/tcsh
+#
+## Project : USGS CONUS404
+#  Purpose : batch submit dependent jobs for the routine post-processing script.
+#
+#  Kyoko Ikeda 2 February 2023
+#
+#  How to run:
+#  (a) conda activate ncl_stable
+#  (b) Change yyyy, mm, and sleep_hrs in User Setting
+#
+# Usage: ./run_batch_post_processing.csh > logfile_batch 2>&1 &
+#
+#--------------------------------------------------#
+# User setting : yyyy is calendar year
+#--------------------------------------------------#
+
+ set sleep_hrs = 0
+ set yyyy = 2022
+ set season = 4
+
+ if ( ${season} == 1 ) then
+    set MMs = ( 1 2 3 )
+    set mm   = 3
+ endif
+
+ if ( ${season} == 2 ) then
+    set MMs = ( 4 5 6 )
+    set mm   = 6
+ endif
+
+ if ( ${season} == 3 ) then
+    set MMs = ( 7 8 9 )
+    set mm   = 9
+ endif
+
+ if ( ${season} == 4 ) then
+    set MMs = ( 10 11 12 )
+    set mm   = 12
+ endif
+ echo "  year = "${yyyy}"  last_month = "${mm}"  season_opt = "${season}" SLEEP Hr = "${sleep_hrs}
+
+#---------------setting sleep hours ---------------#
+ squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E"
+ echo " sleeping for "${sleep_hrs}" hrs.... "
+ echo " now ..."
+ date
+ sleep ${sleep_hrs}h
+ echo " submitting ..."
+ date
+
+#---------------------------------------------------#
+#-------------- first batch ------------------------#
+#---------------------------------------------------#
+ echo "     SUBMIT 2D and 3D"
+ ./submit_dependent_jobs_make2d_production.csh 2849848 ${yyyy} ${season}
+#./submit_dependent_jobs_make2d_production.csh 99999 ${yyyy} ${season}
+ sleep 10s
+  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrf2d.out
+ set jobid = `cat squeue_wrf2d.out | grep make2d_${yyyy}${mm}b | awk '{print $1}' | awk -F'_' '{print $1}'`
+ echo " jobid for wrf2d ${yyyy}-${mm}  "${jobid}
+ echo " "
+ ./submit_dependent_jobs_make3d_production.csh  ${jobid} ${yyyy} ${season}
+ echo "-------------------------------------------------------------"
+ echo ""
+
+#---------------------------------------------------#
+#-------------- second batch -----------------------#
+#---------------------------------------------------#
+ echo "     SUBMIT WRFOUT, XTRM, and AUXHIST24"
+ ./submit_dependent_jobs_makewrfout_production.csh  99999 ${yyyy} ${season}
+ sleep 20s
+  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfout.out
+ set jobidw = `cat squeue_wrfout.out | grep wrfout_${yyyy}${mm} | awk '{print $1}' | awk -F'_' '{print $1}'`
+ echo " jobid for wrfout ${yyyy}-${mm}  "${jobidw}
+ echo " "
+
+#set jobidw = 99999
+ ./submit_dependent_jobs_makextrm_production.csh ${jobidw} ${yyyy} ${season}
+ sleep 20s
+  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfxtrm.out
+ set jobidx = `cat squeue_wrfxtrm.out | grep xtrm_${yyyy}${mm} | awk '{print $1}'`
+ echo " jobid for wrfxtrm ${yyyy}-${mm}  "${jobidx}
+ echo " "
+
+ ./submit_dependent_jobs_makeauxhist_production.csh ${jobidx} ${yyyy} ${season}
+#echo " "
+
+
+#--------------------------------------------------#
+ echo " DONE SUBMIT"
+ exit 0
