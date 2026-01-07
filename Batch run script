@@ -1,0 +1,87 @@
+This is the batch run script on USGS Denali (using April-May-June 2022 as an example):
+
+#!/bin/bash -l
+# Project : USGS CONUS404
+# Purpose : Submit wrf run on Denali
+#
+# Notes: This is for running and testing semi-production model configuration.
+#        1) 3hrly BC forcnig 
+#        2) 10 grid points for buffer zone.
+#        3) Fei and Celin's latest snow albedo algorithm
+#        4) Reduced nudging frequency to 2min.
+#
+# Last modified : kyoko ikeda 24 December 2020
+#
+#----------------------------------------------------------------------------------
+# Job Setting
+#----------------------------------------------------------------------------------
+#SBATCH --account=impd
+#SBATCH --time=36:00:00
+#SBATCH --error=wrfconus404.err.%J.wy2022AMJ
+#SBATCH --output=wrfconus404.out.%J.wy2022AMJ
+#SBATCH --mail-type=begin,end,fail
+#SBATCH --mail-user=zhangyx@ucar.edu
+#SBATCH --nodes=62
+#SBATCH --ntasks=2480
+#SBATCH --ntasks-per-node=40
+#DW jobdw capacity=24TB access_mode=striped type=scratch
+#DW stage_in source=/caldera/projects/usgs/water/impd/jkim/INPUT/wrfinput_d01.oct011979.pgw_final_mod destination=$DW_JOB_STRIPED/in/wrfinput_d01 type=file
+#DW stage_in source=/caldera/projects/usgs/water/impd/jkim/INPUT/wrflowinp_d01.apr2022-jun2022 destination=$DW_JOB_STRIPED/in/wrflowinp_d01 type=file
+#DW stage_in source=/caldera/projects/usgs/water/impd/jkim/INPUT/wrfbdy_d01.apr2022-jun2022 destination=$DW_JOB_STRIPED/in/wrfbdy_d01 type=file
+#DW stage_in source=/caldera/projects/usgs/water/impd/jkim/INPUT/wrffdda_d01.apr2022-jun2022 destination=$DW_JOB_STRIPED/in/wrffdda_d01 type=file
+#DW stage_out source=$DW_JOB_STRIPED/out destination=/caldera/projects/usgs/water/impd/yzhang/OUTPUT_PGW/WY2022/ type=directory
+
+#----------------------------------------------------------------------------------
+# Load modules
+#----------------------------------------------------------------------------------
+module unload PrgEnv-cray/6.0.10
+module load PrgEnv-intel/6.0.10
+module load cray-netcdf
+module load cray-hdf5
+module load jasper
+module load grib2
+ module li
+
+ ulimit -s unlimited
+
+#----------------------------------------------------------------------------------
+# Main
+#----------------------------------------------------------------------------------
+  export wrfcode_dir=/caldera/projects/usgs/water/impd/yzhang/PGW/wrf-conus404/
+  export wrfinput_dir=$DW_JOB_STRIPED/in
+  export wrfoutput_dir=$DW_JOB_STRIPED/out
+  export wrfnamelist_dir=/caldera/projects/usgs/water/impd/yzhang/namelist/
+  export rsl_dir=rsl_wy2022AMJ
+
+  /bin/mkdir $DW_JOB_STRIPED/out
+
+  cd ${wrfcode_dir}/run
+
+  /bin/rm namelist.input
+  ln -sf ${wrfnamelist_dir}/namelist.input_wrf_wy2022_AMJ namelist.input_tmp
+  cat namelist.input_tmp | sed -e "1,$ s|_WRFOUTDIR_|${wrfoutput_dir}|" > namelist.input
+  cat namelist.input
+
+  ln -sf ${wrfinput_dir}/wrfinput_d01 wrfinput_d01
+  ln -sf ${wrfinput_dir}/wrflowinp_d01 wrflowinp_d01
+  ln -sf ${wrfinput_dir}/wrfbdy_d01 wrfbdy_d01
+  ln -sf ${wrfinput_dir}/wrffdda_d01 wrffdda_d01
+
+  srun ./wrf.exe
+
+#----------------------------------------------------------------------------------
+# Job summary
+#----------------------------------------------------------------------------------
+  echo " "
+  echo " ... show job summary ..."
+  scontrol show job $SLURM_JOBID
+  echo " "
+  echo " ... saccnt summary ..."
+  saccnt_check.csh $SLURM_JOBID
+
+#----------------------------------------------------------------------------------
+# Clean up
+#----------------------------------------------------------------------------------
+  echo " moving rsl.out and rsl.error to $rsl_dir " 
+  /bin/mkdir $rsl_dir
+  /bin/mv rsl.* $rsl_dir/.
