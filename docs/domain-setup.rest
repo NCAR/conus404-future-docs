@@ -1,0 +1,5 @@
+.. vim: syntax=rst
+.. include:: meta.rest
+
+3. Domain set-up, physics, and fine tuning 
+===========================================

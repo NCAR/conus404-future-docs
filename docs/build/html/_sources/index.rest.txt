@@ -17,5 +17,12 @@ C404 Downscaling Documentation
 
 .. toctree::
    :hidden:
-   :caption: Contents:
-
+   
+   introduction
+   processing
+   domain-setup
+   production-runs
+   eval-analysis
+   presentation-pubs
+   references
+   appendices

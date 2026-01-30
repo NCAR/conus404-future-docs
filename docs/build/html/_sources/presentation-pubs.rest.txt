@@ -1,0 +1,5 @@
+.. vim: syntax=rst
+.. include:: meta.rest
+
+6. Presentation and publication
+===============================
