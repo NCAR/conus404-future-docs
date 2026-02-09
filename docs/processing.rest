@@ -3,7 +3,7 @@
 
 2. Pre- and post-processing scripts and files
 =============================================
-This is the batch run postprocessing script (using October-November-December 2022 as an example):
+This is the batch run postprocessing script (using October-November-December 2022 as an example)::
 
 #!/bin/tcsh
 #
