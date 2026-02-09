@@ -48,7 +48,6 @@ This is the batch run postprocessing script (using October-November-December 202
  echo "  year = "${yyyy}"  last_month = "${mm}"  season_opt = "${season}" SLEEP Hr = "${sleep_hrs}
 
 #---------------setting sleep hours ---------------#
-
  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E"
  echo " sleeping for "${sleep_hrs}" hrs.... "
  echo " now ..."
