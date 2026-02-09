@@ -64,7 +64,7 @@ This is the batch run postprocessing script (using October-November-December 202
 #./submit_dependent_jobs_make2d_production.csh 99999 ${yyyy} ${season}
  sleep 10s
   squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrf2d.out
- set jobid = ``cat squeue_wrf2d.out | grep make2d_${yyyy}${mm}b | awk '{print $1}' | awk -F'_' '{print $1}'``
+ set jobid = \`cat squeue_wrf2d.out | grep make2d_${yyyy}${mm}b | awk '{print $1}' | awk -F'_' '{print $1}'`\
  echo " jobid for wrf2d ${yyyy}-${mm}  "${jobid}
  echo " "
  ./submit_dependent_jobs_make3d_production.csh  ${jobid} ${yyyy} ${season}
