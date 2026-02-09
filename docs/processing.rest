@@ -63,7 +63,7 @@ This is the batch run postprocessing script (using October-November-December 202
  ./submit_dependent_jobs_make2d_production.csh 2849848 ${yyyy} ${season}
 #./submit_dependent_jobs_make2d_production.csh 99999 ${yyyy} ${season}
  sleep 10s
-  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrf2d.out
+ squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrf2d.out
  set jobid = `cat squeue_wrf2d.out | grep make2d_${yyyy}${mm}b | awk '{print $1}' | awk -F'_' '{print $1}'`
  echo " jobid for wrf2d ${yyyy}-${mm}  "${jobid}
  echo " "
@@ -77,7 +77,7 @@ This is the batch run postprocessing script (using October-November-December 202
  echo "     SUBMIT WRFOUT, XTRM, and AUXHIST24"
  ./submit_dependent_jobs_makewrfout_production.csh  99999 ${yyyy} ${season}
  sleep 20s
-  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfout.out
+ squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfout.out
  set jobidw = `cat squeue_wrfout.out | grep wrfout_${yyyy}${mm} | awk '{print $1}' | awk -F'_' '{print $1}'`
  echo " jobid for wrfout ${yyyy}-${mm}  "${jobidw}
  echo " "
@@ -85,7 +85,7 @@ This is the batch run postprocessing script (using October-November-December 202
 #set jobidw = 99999
  ./submit_dependent_jobs_makextrm_production.csh ${jobidw} ${yyyy} ${season}
  sleep 20s
-  squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfxtrm.out
+ squeue -u yzhang -o "%.18i %.9P %.24j %.8u %.8T %.10M %.9l %.6D %R %r %E" >! squeue_wrfxtrm.out
  set jobidx = `cat squeue_wrfxtrm.out | grep xtrm_${yyyy}${mm} | awk '{print $1}'`
  echo " jobid for wrfxtrm ${yyyy}-${mm}  "${jobidx}
  echo " "
