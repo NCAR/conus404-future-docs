@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 =========================================================
-C404 Downscaling Documentation
+Future Climate Simulation Documentation
 =========================================================
 
 .. rst-class:: center
