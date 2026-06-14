@@ -10,3 +10,8 @@ NOAA has a requirement to modernize extreme precipitation guidance for the natio
 The National Academies study recommends that NOAA should adopt a model-based approach to PMP estimation that aligns with the revised PMP definition, consisting of multi-model large ensemble kilometer-scale or finer-resolution modeling to construct the probability distribution of precipitation for PMP estimation.
 
 In this project, NOAA PSL will collaborate with NCAR’s Research Applications Laboratory (RAL) to expand upon NCAR’s CONUS404 dataset to produce a portfolio of high-resolution model simulations taking place in probabilistically representative scenarios to respond to the National Academies recommendation of km-scale or finer continuous simulations.
+
+.. image:: _static/schematic_workflow.png
+   :alt: CONUS404-Future Project Workflow Schematic
+   :align: center
+   :width: 100%
