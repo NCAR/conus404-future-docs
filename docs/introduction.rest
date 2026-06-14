@@ -11,7 +11,7 @@ The National Academies study recommends that NOAA should adopt a model-based app
 
 In this project, NOAA PSL will collaborate with NCAR’s Research Applications Laboratory (RAL) to expand upon NCAR’s CONUS404 dataset to produce a portfolio of high-resolution model simulations taking place in probabilistically representative scenarios to respond to the National Academies recommendation of km-scale or finer continuous simulations.
 
-.. image:: _static/schematic-workflow.png
+.. image:: /_static/schematic-workflow.png
    :alt: CONUS404-Future Project Workflow Schematic
    :align: center
    :width: 100%
