@@ -3,3 +3,8 @@
 
 3. Domain set-up, physics, and fine tuning 
 ===========================================
+
+.. image:: /_static/CONUS404-HGT.jpg
+   :alt: CONUS404 Domain and Height Map
+   :align: center
+   :width: 100%
