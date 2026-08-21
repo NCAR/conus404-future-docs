@@ -2,7 +2,7 @@
 .. vim: syntax=rst
 .. include:: meta.rest
 
-4. Downscaling of paleoclimate
+5. Downscaling of paleoclimate
 ==================
 **Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
 
