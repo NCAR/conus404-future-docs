@@ -15,6 +15,6 @@
 | where PROJ is a future time slice of a climate projection and HIST is the corresponding historical time slice coming from simulations under the same radiative forcing scenario. Both PROJ and HIST periods must be chosen to be long enough to reduce the effects of internal variability (average of ∼30 years) or constructed using ensemble means (Brogli et al, 2023).
 
 .. image:: /_static/CONUS404-PGW-design.png
-   :alt: CONUS404 Domain and Height Map
+   :alt: CONUS404 PGW design
    :align: center
    :width: 100%
