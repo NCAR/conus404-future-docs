@@ -3,6 +3,12 @@
 
 4. Lossy compression
 ==================
-**Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
+The purpose of applying lossy compression is to maintain the fidelity of the data files while reducing their size
+
+Percentage change plots show the percentage changes before and after applying lossy compression for CAPE and SIN variables.
+
+Analyze CAPE and SIN fields using the Spur compression method and evaluate the impacts
+
+Conduct benchmarking tests to measure changes in computation time required for various compression levels
 
 .
