@@ -39,3 +39,15 @@ default_role = 'math'
 pygments_style = 'sphinx'
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 master_doc = 'index'
+
+# Hide footer details and Sphinx attribution
+html_show_copyright = False
+html_show_sphinx = False
+html_show_sourcelink = False
+
+# Hide powered-by text for Alabaster theme
+if 'html_theme_options' not in locals():
+    html_theme_options = {}
+
+html_theme_options['show_powered_by'] = False
+html_theme_options['show_copyright'] = False
