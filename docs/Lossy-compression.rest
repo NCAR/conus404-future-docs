@@ -3,9 +3,9 @@
 
 4. Lossy compression
 ==================
-The purpose of applying lossy compression is to maintain the fidelity of the data files while reducing their size
+The primary motivation for applying lossy compression is to reduce storage requirements while maintaining the data quality to the maximum extent possible, with a goal of achieving at least one order of magnitude reduction in file size.
 
-Percentage change plots show the percentage changes before and after applying lossy compression for CAPE and SIN variables.
+Percentage change plots show the changes before and after applying lossy compression for CAPE and SIN variables.
 
 Analyze CAPE and SIN fields using the Spur compression method and evaluate the impacts
 
