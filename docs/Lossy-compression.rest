@@ -1,8 +1,8 @@
 .. vim: syntax=rst
 .. include:: meta.rest
 
-4. Production runs
+4. Lossy compression
 ==================
 **Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
 
-Production run will begin as soon as all the testing and sanity checks are done.
+.
