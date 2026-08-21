@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 .. include:: meta.rest
 
-3. Domain set-up, physics, and fine tuning 
+3. CONUS404 PGW dataset 
 ===========================================
 
 .. image:: /_static/CONUS404-HGT.jpg
