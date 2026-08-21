@@ -4,6 +4,7 @@
 
 5. Paleoclimate downscaling
 ==================
-**Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
+Process the MESACLIP data using Erin’s workflow for the 1-y test run. 
+
 
 .
