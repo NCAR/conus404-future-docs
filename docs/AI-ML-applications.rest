@@ -4,12 +4,9 @@
 6. AI/ML applications
 ==========================
 
-Downscaling Model Architecture Review
-The team evaluated deep learning pipelines using U-Transformer architecture and residual diffusion for precipitation downscaling. These models utilize 72 variables to improve accuracy compared to existing generative adversarial networks.
+Conduct downscaling model archtecture review and evaluate deep learning pipelines using U-Transformer architecture and residual diffusion for precipitation downscaling. These models utilize 72 variables to improve accuracy compared to existing generative adversarial networks.
 
-Model Performance and Terminology
-Evaluations across 3 flood events revealed that quantile mapping requires seasonal adjustments to avoid overestimation. The team decided to classify the dataset as reference data rather than ground truth to ensure scientific accuracy.
+Evaluations across 3 flood events reveal that quantile mapping requires seasonal adjustments to avoid overestimation. The CONUS404 dataset should be used as reference data rather than ground truth to ensure scientific accuracy.
 
-Computational Efficiency and Strategy
-The team addressed the computational trade-off required for high-accuracy diffusion models against faster baseline methods. Strategic alignment focused on generating robust statistical samples for extreme precipitation events rather than seeking universal model perfection.
+There is computational trade-off required for high-accuracy diffusion models against faster baseline methods. Strategic alignment focuses on generating robust statistical samples for extreme precipitation events rather than seeking universal model perfection.
 
