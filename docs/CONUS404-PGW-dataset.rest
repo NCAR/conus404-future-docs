@@ -4,11 +4,11 @@
 3. CONUS404 PGW dataset 
 ===========================================
 
-Concept of the PGW approach
-PGW = CTRL + ∆
-CTRL and PGW represent the boundary conditions of two regional climate model (RCM) simulations of the past and future climate conditions, respectively, and Δ is the future changes often referred to as climate change deltas. Δ must be computed from a separate climate projection as
-∆ = PROJ - HIST
-where PROJ is a future time slice of a climate projection and HIST is the corresponding historical time slice coming from simulations under the same radiative forcing scenario. Both PROJ and HIST periods must be chosen to be long enough to reduce the effects of internal variability (average of ∼30 years) or constructed using ensemble means (Brogli et al, 2023).
+| Concept of the PGW approach
+| PGW = CTRL + ∆
+| CTRL and PGW represent the boundary conditions of two regional climate model (RCM) simulations of the past and future climate conditions, respectively, and Δ is the future changes often referred to as climate change deltas. Δ must be computed from a separate climate projection as
+| ∆ = PROJ - HIST
+| where PROJ is a future time slice of a climate projection and HIST is the corresponding historical time slice coming from simulations under the same radiative forcing scenario. Both PROJ and HIST periods must be chosen to be long enough to reduce the effects of internal variability (average of ∼30 years) or constructed using ensemble means (Brogli et al, 2023).
 
 .. image:: /_static/CONUS404-HGT.jpg
    :alt: CONUS404 Domain and Height Map
