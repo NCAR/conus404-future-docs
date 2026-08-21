@@ -6,3 +6,8 @@
 CONUS404 is a regional hydroclimate dataset produced using the WRF (Weather Research and Forecasting; Skamarock et al., 2005) model to dynamically downscale the fifth generation European Centre for Medium-Range Weather Forecasts reanalysis (ERA5; Hersbach et al. 2020). CONUS404 covers the historical period of 1979 to 2024 over the CONUS domain at 4-km spatial resolution and hourly temporal resolution.
 
 This convection-permitting simulation enables realistic representation of orographic precipitation and snowpack over the western U.S. and mesoscale convective precipitation over the central and eastern U.S., both of which are vital water resources for the CONUS (Rasmussen et al., 2023). CONUS404 provides an opportunity to drive hydrological models and conduct water budget analyses at relatively high spatial and temporal resolution, which are important for hydroclimate studies and water availability assessment.
+
+.. image:: /_static/CONUS404-HGT.jpg
+   :alt: CONUS404 Domain and Terrain Height
+   :align: center
+   :width: 100%
