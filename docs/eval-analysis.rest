@@ -1,8 +1,0 @@
-.. vim: syntax=rst
-.. include:: meta.rest
-
-5. Evaluation and analysis
-==========================
-**Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
-
-Evaluation of the model simulations will be posted here.
