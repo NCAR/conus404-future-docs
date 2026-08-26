@@ -21,9 +21,8 @@ Future Climate Simulation Documentation
    introduction
    CONUS404-dataset
    CONUS404-PGW-dataset
-   Lossy-compression
-   Paleoclimate-downscaling
-   AI-ML-applications
+   PMP-simulations
+   postprocessing
    presentation-pubs
    references
    appendices
