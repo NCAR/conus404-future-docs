@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 .. include:: meta.rest
 
-5. Presentation and publication
+6. Presentation and publication
 ===============================
 **Project Title: Future Climate Simulation Technical Support and Scientific Collaboration**
 
