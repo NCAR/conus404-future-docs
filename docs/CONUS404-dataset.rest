@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 .. include:: meta.rest
 
-2. NCAR CONUS404 dataset
+2. CONUS404 dataset
 =============================================
 If details of Earth's hydroclimate could be resolved down to kilometer-scale spatial resolution and hourly time scales for long time periods, it could revolutionize hydroclimate studies around the world. The increased computer power, better supporting data, and improvements in atmospheric modeling now available make this possible for the conterminous United States (CONUS). Through a collaborative initiative between the U.S. Geological Survey (USGS) and the National Science Foundation National Center for Atmospheric Research (NSF NCAR), a 4-km, 40-plus-year dataset was created to realistically resolve mesoscale atmospheric phenomena, such as convective systems, and to accurately place them onto the hydrologic modeling basins.
 
