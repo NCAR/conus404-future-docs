@@ -29,7 +29,7 @@ The model is configured with 51 stretched vertical levels, with the top at 50 hP
 
 2.2 Input dataset
 ---------------------------------------------
-Add information about ERA5 boundary conditions, initial conditions, and driving datasets here.
+The model is driven by the fifth-generation European Centre for Medium-range Weather Forecasts atmospheric reanalysis (ERA5). The model is initialized at 0000 universal coordinated time (UTC) 1 October 1979 and updated every 3 h at the lateral and lower boundaries using the ERA5 reanalysis data. The model time step is 20s throughout the simulation period. 
 
 
 2.3 Model and model physics
