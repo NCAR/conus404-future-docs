@@ -13,3 +13,17 @@ This convection-permitting simulation enables realistic representation of orogra
    :alt: CONUS404 Domain and Terrain Height
    :align: center
    :width: 100%
+
+2.1 Domain configuration
+---------------------------------------------
+Add details about the domain size, grid spacing (4-km), projection, and spatial coverage here.
+
+
+2.2 Input dataset
+---------------------------------------------
+Add information about ERA5 boundary conditions, initial conditions, and driving datasets here.
+
+
+2.3 Model and model physics
+---------------------------------------------
+Add details about WRF model configurations, physics parameterizations (microphysics, boundary layer, land surface model, etc.) here.
