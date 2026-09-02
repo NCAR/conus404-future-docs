@@ -13,8 +13,9 @@ This convection-permitting simulation enables realistic representation of orogra
 
 2.1 Domain configuration
 ---------------------------------------------
-The model domain covers the Conterminous U.S., as well as a significant portion of southern Canada and northern Mexico (see :ref:`fig_conus404_domain`). 
-Add details about the domain size, grid spacing (4-km), projection, and spatial coverage here.
+The model domain at 4-km horizontal resolution covers the Conterminous U.S., as well as a significant portion of southern Canada and northern Mexico and part of the Eastern Pacific and Wester Atlantic (see :ref:`fig_conus404_domain`). The domain has 1,368 grid points in the east-west direction and 1,016 grid points in the north-south direction yielding a size of 5,472 km x 4,064 km. This large domain ensures that the weather systems that impact the CONUS are well represented.
+
+The model is configured with 51 stretched vertical levels, with the top at 50 hPa. The finest vertical grid spacing is ~ 50 m near the surface, stretching to ~ 700 m near the model top.
 
 .. _fig_conus404_domain:
 
