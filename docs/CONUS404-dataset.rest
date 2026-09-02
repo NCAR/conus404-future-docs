@@ -23,7 +23,7 @@ Add details about the domain size, grid spacing (4-km), projection, and spatial 
    :align: center
    :width: 100%
 
-   CONUS404 model domain and terrain height
+   Fig. 2.1.1 CONUS404 model domain and terrain height
 
 
 2.2 Input dataset
