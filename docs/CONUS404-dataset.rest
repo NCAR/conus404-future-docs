@@ -9,14 +9,21 @@ CONUS404 is a regional hydroclimate dataset produced using the WRF (Weather Rese
 
 This convection-permitting simulation enables realistic representation of orographic precipitation and snowpack over the western U.S. and mesoscale convective precipitation over the central and eastern U.S., both of which are vital water resources for the CONUS (Rasmussen et al., 2023). CONUS404 provides an opportunity to drive hydrological models and conduct water budget analyses at relatively high spatial and temporal resolution, which are important for hydroclimate studies and water availability assessment.
 
-.. image:: /_static/CONUS404-HGT.jpg
+
+
+2.1 Domain configuration
+---------------------------------------------
+The model domain covers the Conterminous U.S., as well as a significant portion of southern Canada and northern Mexico (:numref:fig_conus404_domain``). 
+Add details about the domain size, grid spacing (4-km), projection, and spatial coverage here.
+
+.. _fig_conus404_domain:
+
+.. figure:: /_static/CONUS404-HGT.jpg
    :alt: CONUS404 Domain and Terrain Height
    :align: center
    :width: 100%
 
-2.1 Domain configuration
----------------------------------------------
-Add details about the domain size, grid spacing (4-km), projection, and spatial coverage here.
+   CONUS404 model domain and terrain height
 
 
 2.2 Input dataset
