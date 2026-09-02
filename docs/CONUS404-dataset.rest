@@ -13,7 +13,7 @@ This convection-permitting simulation enables realistic representation of orogra
 
 2.1 Domain configuration
 ---------------------------------------------
-The model domain covers the Conterminous U.S., as well as a significant portion of southern Canada and northern Mexico (:numref:fig_conus404_domain``). 
+The model domain covers the Conterminous U.S., as well as a significant portion of southern Canada and northern Mexico (see :ref:`fig_conus404_domain`). 
 Add details about the domain size, grid spacing (4-km), projection, and spatial coverage here.
 
 .. _fig_conus404_domain:
@@ -23,7 +23,7 @@ Add details about the domain size, grid spacing (4-km), projection, and spatial 
    :align: center
    :width: 100%
 
-   Fig. 2.1.1 CONUS404 model domain and terrain height
+   CONUS404 model domain and terrain height
 
 
 2.2 Input dataset
