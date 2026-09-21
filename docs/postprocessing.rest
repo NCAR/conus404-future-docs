@@ -4,7 +4,18 @@
 
 5. Post Processing
 ==================
-Lossy compression, paleoclimate downscaling, AI/ML 
+This section describes the post-processing of the CONUS404 historical and PGW datasets, and the PMP dataset.
+
+5.1 Choice of the variables
+---------------------------------------------
+The choice of the variables depend on the appliction.
 
 
-.
+5.2 CONUS404 historical and PGW datasets
+---------------------------------------------
+The CONUS404 historical and PGW datasets have the same variables, file structure.
+
+
+5.3 PMP simulations
+---------------------------------------------
+The PMP simulations are constructed using a similar model configration but different driving data.
