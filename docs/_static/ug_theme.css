@@ -27,3 +27,11 @@
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: normal;
 }
+
+/* Hide Read the Docs Ethical Ads & Community Ads */
+#ethical-ad-placement,
+div[data-ea-publisher],
+.ethical-rtd,
+.ethical-ad {
+    display: none !important;
+}
