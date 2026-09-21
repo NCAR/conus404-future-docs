@@ -7,8 +7,6 @@
 Future Climate Simulation Documentation
 =========================================================
 
-.. rst-class:: center
-
     This living documentation contains the technical details for creating the CONUS404 dataset, the CONUS404 PGW dataset, and the PMP dataset, as well as the postprocessing details of the datasets.
 
     The presentations and publications resulted from this work will be added as they become available.
