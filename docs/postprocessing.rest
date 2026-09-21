@@ -4,7 +4,7 @@
 
 5. Post Processing
 ==================
-This section describes the post-processing of the CONUS404 historical and PGW datasets, and the PMP dataset.
+This section describes the post-processing of the CONUS404 historical and PGW datasets, and the PMP simulations.
 
 5.1 Choice of the variables
 ---------------------------------------------
