@@ -4,5 +4,15 @@
 4. PMP simulations
 ==================
 
+4.1 preprosscing of the driving dataset
+---------------------------------------------
+The PMP simulations are consctructed using the same WRF model configuration as the CONUS404.
 
-.
+4.2 Construction of the ensemble members
+---------------------------------------------
+To encompass the spread of the possible maximum precipitation amount, ensemble members are constructed.
+
+4.3 Model physics
+---------------------------------------------
+This section describes the model physics and land surface options.
+
